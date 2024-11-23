@@ -26,9 +26,6 @@ const User = sequelize.define(
         passwordResetToken: {
             type: DataTypes.STRING,
         },
-        passwordResetExpires: {
-            type: DataTypes.DATE,
-        }
     },
     {
         timestamps: true,
