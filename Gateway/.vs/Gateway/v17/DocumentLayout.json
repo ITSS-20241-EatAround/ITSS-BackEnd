@@ -3,24 +3,36 @@
   "WorkspaceRootPath": "C:\\Users\\trung\\Desktop\\BakcEnd\\Gateway\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7C9E9E24-0412-45E4-9823-65BAF446F345}|Gateway.csproj|c:\\users\\trung\\desktop\\bakcend\\gateway\\controllers\\filecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7C9E9E24-0412-45E4-9823-65BAF446F345}|Gateway.csproj|solutionrelative:controllers\\filecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7C9E9E24-0412-45E4-9823-65BAF446F345}|Gateway.csproj|c:\\users\\trung\\desktop\\bakcend\\gateway\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7C9E9E24-0412-45E4-9823-65BAF446F345}|Gateway.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7C9E9E24-0412-45E4-9823-65BAF446F345}|Gateway.csproj|c:\\users\\trung\\desktop\\bakcend\\gateway\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{7C9E9E24-0412-45E4-9823-65BAF446F345}|Gateway.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{7C9E9E24-0412-45E4-9823-65BAF446F345}|Gateway.csproj|c:\\users\\trung\\desktop\\bakcend\\gateway\\controllers\\mailcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7C9E9E24-0412-45E4-9823-65BAF446F345}|Gateway.csproj|solutionrelative:controllers\\mailcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7C9E9E24-0412-45E4-9823-65BAF446F345}|Gateway.csproj|c:\\users\\trung\\desktop\\bakcend\\gateway\\controllers\\filecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7C9E9E24-0412-45E4-9823-65BAF446F345}|Gateway.csproj|solutionrelative:controllers\\filecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7C9E9E24-0412-45E4-9823-65BAF446F345}|Gateway.csproj|c:\\users\\trung\\desktop\\bakcend\\gateway\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{7C9E9E24-0412-45E4-9823-65BAF446F345}|Gateway.csproj|solutionrelative:appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7C9E9E24-0412-45E4-9823-65BAF446F345}|Gateway.csproj|c:\\users\\trung\\desktop\\bakcend\\gateway\\helpers\\filehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7C9E9E24-0412-45E4-9823-65BAF446F345}|Gateway.csproj|solutionrelative:helpers\\filehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7C9E9E24-0412-45E4-9823-65BAF446F345}|Gateway.csproj|c:\\users\\trung\\desktop\\bakcend\\gateway\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{7C9E9E24-0412-45E4-9823-65BAF446F345}|Gateway.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7C9E9E24-0412-45E4-9823-65BAF446F345}|Gateway.csproj|c:\\users\\trung\\desktop\\bakcend\\gateway\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7C9E9E24-0412-45E4-9823-65BAF446F345}|Gateway.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7C9E9E24-0412-45E4-9823-65BAF446F345}|Gateway.csproj|c:\\users\\trung\\desktop\\bakcend\\gateway\\helpers\\mailhelpers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7C9E9E24-0412-45E4-9823-65BAF446F345}|Gateway.csproj|solutionrelative:helpers\\mailhelpers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7C9E9E24-0412-45E4-9823-65BAF446F345}|Gateway.csproj|c:\\users\\trung\\desktop\\bakcend\\gateway\\helpers\\imailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7C9E9E24-0412-45E4-9823-65BAF446F345}|Gateway.csproj|solutionrelative:helpers\\imailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7C9E9E24-0412-45E4-9823-65BAF446F345}|Gateway.csproj|c:\\users\\trung\\desktop\\bakcend\\gateway\\helpers\\filehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7C9E9E24-0412-45E4-9823-65BAF446F345}|Gateway.csproj|solutionrelative:helpers\\filehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7C9E9E24-0412-45E4-9823-65BAF446F345}|Gateway.csproj|c:\\users\\trung\\desktop\\bakcend\\gateway\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
@@ -34,73 +46,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 11,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "appsettings.Development.json",
-              "DocumentMoniker": "C:\\Users\\trung\\Desktop\\BakcEnd\\Gateway\\appsettings.Development.json",
-              "RelativeDocumentMoniker": "appsettings.Development.json",
-              "ToolTip": "C:\\Users\\trung\\Desktop\\BakcEnd\\Gateway\\appsettings.Development.json",
-              "RelativeToolTip": "appsettings.Development.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAACsAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-11-22T13:06:09.261Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\trung\\Desktop\\BakcEnd\\Gateway\\appsettings.json",
-              "RelativeDocumentMoniker": "appsettings.json",
-              "ToolTip": "C:\\Users\\trung\\Desktop\\BakcEnd\\Gateway\\appsettings.json",
-              "RelativeToolTip": "appsettings.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAACsAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-11-22T13:04:07.297Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "FileHelper.cs",
-              "DocumentMoniker": "C:\\Users\\trung\\Desktop\\BakcEnd\\Gateway\\Helpers\\FileHelper.cs",
-              "RelativeDocumentMoniker": "Helpers\\FileHelper.cs",
-              "ToolTip": "C:\\Users\\trung\\Desktop\\BakcEnd\\Gateway\\Helpers\\FileHelper.cs",
-              "RelativeToolTip": "Helpers\\FileHelper.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAACwAAAAiAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-22T12:48:13.686Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "FileController.cs",
-              "DocumentMoniker": "C:\\Users\\trung\\Desktop\\BakcEnd\\Gateway\\Controllers\\FileController.cs",
-              "RelativeDocumentMoniker": "Controllers\\FileController.cs",
-              "ToolTip": "C:\\Users\\trung\\Desktop\\BakcEnd\\Gateway\\Controllers\\FileController.cs",
-              "RelativeToolTip": "Controllers\\FileController.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAABQAAAANAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-22T12:42:53.081Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\trung\\Desktop\\BakcEnd\\Gateway\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\trung\\Desktop\\BakcEnd\\Gateway\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABoAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-22T12:15:00.998Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
@@ -119,7 +66,111 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "IMailService.cs",
+              "DocumentMoniker": "C:\\Users\\trung\\Desktop\\BakcEnd\\Gateway\\Helpers\\IMailService.cs",
+              "RelativeDocumentMoniker": "Helpers\\IMailService.cs",
+              "ToolTip": "C:\\Users\\trung\\Desktop\\BakcEnd\\Gateway\\Helpers\\IMailService.cs",
+              "RelativeToolTip": "Helpers\\IMailService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAApAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-24T10:54:11.363Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MailController.cs",
+              "DocumentMoniker": "C:\\Users\\trung\\Desktop\\BakcEnd\\Gateway\\Controllers\\MailController.cs",
+              "RelativeDocumentMoniker": "Controllers\\MailController.cs",
+              "ToolTip": "C:\\Users\\trung\\Desktop\\BakcEnd\\Gateway\\Controllers\\MailController.cs",
+              "RelativeToolTip": "Controllers\\MailController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-24T10:29:57.191Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 5,
+              "Title": "MailHelpers.cs",
+              "DocumentMoniker": "C:\\Users\\trung\\Desktop\\BakcEnd\\Gateway\\Helpers\\MailHelpers.cs",
+              "RelativeDocumentMoniker": "Helpers\\MailHelpers.cs",
+              "ToolTip": "C:\\Users\\trung\\Desktop\\BakcEnd\\Gateway\\Helpers\\MailHelpers.cs",
+              "RelativeToolTip": "Helpers\\MailHelpers.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACMAAAAfAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-24T10:29:32.521Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "C:\\Users\\trung\\Desktop\\BakcEnd\\Gateway\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "appsettings.Development.json",
+              "ToolTip": "C:\\Users\\trung\\Desktop\\BakcEnd\\Gateway\\appsettings.Development.json",
+              "RelativeToolTip": "appsettings.Development.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-11-22T13:06:09.261Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\trung\\Desktop\\BakcEnd\\Gateway\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\Users\\trung\\Desktop\\BakcEnd\\Gateway\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAACAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-11-22T13:04:07.297Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "FileHelper.cs",
+              "DocumentMoniker": "C:\\Users\\trung\\Desktop\\BakcEnd\\Gateway\\Helpers\\FileHelper.cs",
+              "RelativeDocumentMoniker": "Helpers\\FileHelper.cs",
+              "ToolTip": "C:\\Users\\trung\\Desktop\\BakcEnd\\Gateway\\Helpers\\FileHelper.cs",
+              "RelativeToolTip": "Helpers\\FileHelper.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACwAAAAiAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-22T12:48:13.686Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "FileController.cs",
+              "DocumentMoniker": "C:\\Users\\trung\\Desktop\\BakcEnd\\Gateway\\Controllers\\FileController.cs",
+              "RelativeDocumentMoniker": "Controllers\\FileController.cs",
+              "ToolTip": "C:\\Users\\trung\\Desktop\\BakcEnd\\Gateway\\Controllers\\FileController.cs",
+              "RelativeToolTip": "Controllers\\FileController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-22T12:42:53.081Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\trung\\Desktop\\BakcEnd\\Gateway\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\trung\\Desktop\\BakcEnd\\Gateway\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAA4AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-22T12:15:00.998Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "launchSettings.json",
               "DocumentMoniker": "C:\\Users\\trung\\Desktop\\BakcEnd\\Gateway\\Properties\\launchSettings.json",
               "RelativeDocumentMoniker": "Properties\\launchSettings.json",

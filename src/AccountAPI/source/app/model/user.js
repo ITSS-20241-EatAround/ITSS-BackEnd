@@ -10,10 +10,6 @@ const User = sequelize.define(
             primaryKey: true,
             autoIncrement: true,
         }, 
-        name: {
-            type: DataTypes.STRING,
-            allowNull: false,
-        }, 
         email: {
             type: DataTypes.STRING,
             allowNull: false,
@@ -22,9 +18,6 @@ const User = sequelize.define(
         password: {
             type: DataTypes.STRING,
             allowNull: false,
-        },
-        passwordResetToken: {
-            type: DataTypes.STRING,
         },
     },
     {
@@ -35,7 +28,7 @@ const User = sequelize.define(
 //hook để hash password
 User.beforeCreate(async(user, option)=>{
     if(!user.password){
-        throw new Error('Password là bắt buộc');
+        throw new Error('Password is required');
     }
     const salt = await bcrypt.genSalt(10);
     user.password = await bcrypt.hash(user.password, salt);

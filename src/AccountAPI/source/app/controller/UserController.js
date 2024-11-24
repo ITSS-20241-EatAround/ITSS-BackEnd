@@ -7,9 +7,9 @@ class UserController{
     async Register(req, res){
         const {email, name, password} = req.body;
         if(!email || !name | !password){
-            return res.status(400).json({message: "Please fill in all fields."});
+            return res.status(400).json({success: false,message: "Please fill in all fields."});
         }
-        //Kiểm tra email có tồn tại
+
         const existEmail = await User.findOne({
             where: {email: email}
         });
@@ -19,7 +19,7 @@ class UserController{
                 message: "Email đã tồn tại."
             });
         };
-        //Tạo mới user
+
         const newUser = await User.create({
             email: email,
             name: name,
@@ -81,10 +81,9 @@ class UserController{
             });
         } else {
             try {
-                //Tạo resetPassword
                 const resetToken = CryptoJS.lib.WordArray.random(32).toString(CryptoJS.enc.Hex);
                 const passwordResetToken = CryptoJS.SHA256(resetToken).toString(CryptoJS.enc.Hex);
-                //Lưu passwordResetToken vào database
+
                 await User.update({
                     passwordResetToken: passwordResetToken,
                 }, {

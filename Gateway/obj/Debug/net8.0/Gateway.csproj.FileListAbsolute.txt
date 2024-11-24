@@ -32,3 +32,8 @@ C:\Users\trung\Desktop\BakcEnd\Gateway\obj\Debug\net8.0\refint\Gateway.dll
 C:\Users\trung\Desktop\BakcEnd\Gateway\obj\Debug\net8.0\Gateway.pdb
 C:\Users\trung\Desktop\BakcEnd\Gateway\obj\Debug\net8.0\Gateway.genruntimeconfig.cache
 C:\Users\trung\Desktop\BakcEnd\Gateway\obj\Debug\net8.0\ref\Gateway.dll
+C:\Users\trung\Desktop\BakcEnd\Gateway\bin\Debug\net8.0\BouncyCastle.Cryptography.dll
+C:\Users\trung\Desktop\BakcEnd\Gateway\bin\Debug\net8.0\MailKit.dll
+C:\Users\trung\Desktop\BakcEnd\Gateway\bin\Debug\net8.0\MimeKit.dll
+C:\Users\trung\Desktop\BakcEnd\Gateway\bin\Debug\net8.0\System.Formats.Asn1.dll
+C:\Users\trung\Desktop\BakcEnd\Gateway\obj\Debug\net8.0\Gateway.sourcelink.json
