@@ -10,7 +10,7 @@ app.use(express.urlencoded({ extended: true }));
 
 try {
     await sequelize.sync({force: false});
-    console.log("Đồng bộ thành công");
+    console.log("OK!");
 } catch (error) {
     console.log(error.message);
 }
