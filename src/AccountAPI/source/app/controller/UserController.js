@@ -1,8 +1,9 @@
 import User from '../model/user.js';
 import bcrypt from 'bcrypt';
 import genAccessToken from '../middleware/jwt.js';
-import jwt from 'jsonwebtoken';
+
 import fs from 'fs/promises';  // Đọc file html
+import path from 'path';
 
 class UserController{
     async Register(req, res){
@@ -81,13 +82,19 @@ class UserController{
                     message: "Email does not exist."
                 });
             } else {
-                const resetToken = jwt.sign(
-                    {id: existEmail.id},
-                    process.env.RESET_TOKEN_SECRET_KEY,
-                    {expiresIn: '30m'}
+                const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*';
+                const length = 8;
+                let newPassword = '';
+                for(let i = 0; i < length; i++){
+                    newPassword = newPassword + chars.charAt(Math.floor(Math.random()*chars.length));
+                }
+                await User.update(
+                    { password: newPassword },
+                    { where: { email: email } }
                 );
-                const html = await fs.readFile('../../template/resetPassword.html', 'utf-8');
-                const emailBody = html.replace('{{resetLink}}', `http://localhost:3000/api/resetPassword/${resetToken}`)
+                const htmlPath = path.resolve(__dirname, '../../template/resetPassword.html');
+                const html = await fs.readFileSync(htmlPath, 'utf8');
+                const emailBody = html.replace('{{newPassword}}', newPassword)
                 //Gọi đến api localhost:7200/api/v1/mail
                 const response = await fetch('http://localhost:7200/api/v1/mail', {
                     method: 'POST', 
@@ -96,7 +103,7 @@ class UserController{
                     },
                     body: JSON.stringify({
                         toEmail: email,
-                        subject: 'Password Reset Request',
+                        subject: 'Your New Password',
                         body: emailBody
                     })
                 });
@@ -119,33 +126,40 @@ class UserController{
         }
     
     async changePassword(req, res){
-        const{password, resetToken} = req.body;
-        if (!resetToken || !passwordassword) {
-            return res.status(400).json({
-                success: false,
-                message: "Please provide reset token and new password."
-            });
-        }
+        const newPassword = req.body;
+        const currentPassword = req.body;
+        const email = req.user; //lấy email từ jwt gửi từ người dùng
         try {
-            const decode = jwt.verify(resetToken, process.env.RESET_TOKEN_SECRET_KEY);
-            if(!decode){
-                return res.status(400).json({
+            const userChangePassword = await User.findOne({where: {
+                email: email,
+            }});
+            const isPassword = bcrypt.compareSync(currentPassword, userChangePassword.password);
+            if(!isPassword){
+                return res.status(401).json({
                     success: false,
-                    message: "Invalid or expired reset token."
+                    message: 'Current password wrong.',
                 });
             }
-            await User.update({password:password}, {where: {email: decode.email}});
+            await User.update({
+                password: newPassword
+            },
+            {
+                where: {
+                    email: email
+                }
+            }
+            );
             return res.status(200).json({
                 success: true,
-                message: 'Password has been reset successfully.'
-            });
+                message: 'Password changed successfully.'
+            })
         } catch (error) {
             return res.status(500).json({
                 success: false,
-                message: 'System error. Unable to reset password.'
-            });
+                message: 'System error. Unable to change password.',
+                error: error.message
+            })
         }
     }
 }
-
 export default new UserController;
