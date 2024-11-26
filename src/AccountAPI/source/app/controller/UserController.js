@@ -2,13 +2,16 @@ import User from '../model/user.js';
 import bcrypt from 'bcrypt';
 import genAccessToken from '../middleware/jwt.js';
 
-import fs from 'fs/promises';  // Đọc file html
+import fs from 'fs/promises';
 import path from 'path';
+import { fileURLToPath } from 'url';
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 class UserController{
     async Register(req, res){
-        const {email, name, password} = req.body;
-        if(!email || !name | !password){
+        const {email,  password} = req.body;
+        if(!email || !password){
             return res.status(400).json({success: false,message: "Please fill in all fields."});
         }
 
@@ -24,7 +27,6 @@ class UserController{
 
         const newUser = await User.create({
             email: email,
-            name: name,
             password: password
         });
         return res.status(200).json({
@@ -93,8 +95,9 @@ class UserController{
                     { where: { email: email } }
                 );
                 const htmlPath = path.resolve(__dirname, '../../template/resetPassword.html');
-                const html = await fs.readFileSync(htmlPath, 'utf8');
-                const emailBody = html.replace('{{newPassword}}', newPassword)
+                const html = await fs.readFile(htmlPath, 'utf8');
+                var emailBody = html.replace('{{newPassword}}', newPassword)
+                emailBody = emailBody.replace('{{user}}',email);
                 //Gọi đến api localhost:7200/api/v1/mail
                 const response = await fetch('http://localhost:7200/api/v1/mail', {
                     method: 'POST', 
@@ -113,14 +116,13 @@ class UserController{
                 return res.status(200).json({
                     success: true,
                     message: 'Email sent successfully.',
-                    resetToken: passwordResetToken,
-                    content: data.content
+                    content: 'Change Password successfully.'
                 })
             } 
             }   catch (error) {
                 return res.status(500).json({
                     success: false,
-                    message: 'System error. Unable to send email.',
+                    message: 'System error. Unable to send email.'
                 });
             }
         }
