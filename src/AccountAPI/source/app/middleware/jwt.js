@@ -7,7 +7,7 @@ const genAccessToken = (id, name, email) => jwt.sign(
     },
     process.env.SECRET_KEY,
     {
-        expiresIn: '3d'
+        expiresIn: '30d'
     }
 );
 

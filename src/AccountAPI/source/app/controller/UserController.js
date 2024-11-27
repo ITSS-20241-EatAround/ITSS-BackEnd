@@ -1,6 +1,7 @@
 import User from '../model/user.js';
 import bcrypt from 'bcrypt';
 import genAccessToken from '../middleware/jwt.js';
+import { Op } from 'sequelize';
 
 import fs from 'fs/promises';
 import path from 'path';
@@ -10,22 +11,28 @@ const __dirname = path.dirname(__filename);
 
 class UserController{
     async Register(req, res){
-        const {email,  password} = req.body;
-        if(!email || !password){
+        const {email,  password, name} = req.body;
+        if(!email || !password || !name){
             return res.status(400).json({success: false,message: "Please fill in all fields."});
         }
 
         const existEmail = await User.findOne({
-            where: {email: email}
+            where: {
+                [Op.or]: [
+                    { email: email },
+                    { name: name }
+                ]
+            }
         });
         if(existEmail !== null){
             return res.status(409).json({
                 success: false,
-                message: "Email already exists."
+                message: "Email or username already exists."
             });
         };
 
         const newUser = await User.create({
+            name : name,
             email: email,
             password: password
         });
@@ -41,8 +48,14 @@ class UserController{
         }
         //Kiểm tra email
         const existEmail = await User.findOne({
-            where: {email: email}
-        })
+            where: {
+                [Op.or]: [
+                    { email: email },
+                    { name: email }
+                ]
+            }
+        });
+        
         if(existEmail === null){
             return res.status(409).json({
                 success: false,
@@ -90,8 +103,10 @@ class UserController{
                 for(let i = 0; i < length; i++){
                     newPassword = newPassword + chars.charAt(Math.floor(Math.random()*chars.length));
                 }
+                const salt = await bcrypt.genSalt(10);
+                const psw = await bcrypt.hash(newPassword, salt);
                 await User.update(
-                    { password: newPassword },
+                    { password: psw },
                     { where: { email: email } }
                 );
                 const htmlPath = path.resolve(__dirname, '../../template/resetPassword.html');

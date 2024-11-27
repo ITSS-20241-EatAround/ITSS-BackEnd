@@ -1,21 +1,22 @@
-require('dotenv').config();
-const mysql = require('mysql2');
+const { Sequelize } = require('sequelize');
 
-// Kết nối MySQL
-const connection = mysql.createConnection({
+const sequelize = new Sequelize(
+  process.env.DB_NAME || 'sql12747562', 
+  process.env.DB_USER || 'sql12747562', 
+  process.env.DB_PASSWORD || 'Bj1tiEP6Za',
+  {
     host: process.env.DB_HOST || 'sql12.freemysqlhosting.net',
-    user: process.env.DB_USER || 'sql12747562',
-    password: process.env.DB_PASSWORD || 'Bj1tiEP6Za',
-    database: process.env.DB_NAME || 'sql12747562',
-    port: process.env.DB_PORT || 3306
-});
+    dialect: 'mysql',
+    port: process.env.DB_PORT || 3306,
+  }
+);
 
-connection.connect((err) => {
-    if (err) {
-        console.error('Kết nối database thất bại:', err);
-        process.exit(1);
-    }
-    console.log('Kết nối thành công đến database!');
-});
+sequelize.authenticate()
+  .then(() => {
+    console.log('Connected to the database!');
+  })
+  .catch((err) => {
+    console.error('Unable to connect to the database:', err);
+  });
 
-module.exports = connection;
+module.exports = sequelize;

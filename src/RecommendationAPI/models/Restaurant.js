@@ -1,11 +1,49 @@
-const connection = require('../db');
+const { DataTypes } = require('sequelize');
+const sequelize = require('../db');
 
-class Restaurant {
-    // Lấy danh sách nhà hàng ngẫu nhiên với số lượng giới hạn
-    static getRandomRestaurants(limit, callback) {
-        const query = 'SELECT restaurant_id, name, address, image_url FROM restaurants ORDER BY RAND() LIMIT ?';
-        connection.query(query, [limit], callback);
-    }
-}
+const Restaurant = sequelize.define('Restaurant', {
+  restaurant_id: {
+    type: DataTypes.INTEGER,
+    primaryKey: true,
+    autoIncrement: true,
+  },
+  name: {
+    type: DataTypes.STRING(255),
+    allowNull: false,
+  },
+  address: {
+    type: DataTypes.STRING(255),
+    allowNull: false,
+  },
+  contact: {
+    type: DataTypes.STRING(255),
+    allowNull: true,
+  },
+  menu: {
+    type: DataTypes.TEXT,
+    allowNull: true,
+  },
+  rating: {
+    type: DataTypes.DECIMAL(3, 2),
+    allowNull: true,
+  },
+  image_url: {
+    type: DataTypes.STRING(255),
+    allowNull: true,
+  },
+  latitude: {
+    type: DataTypes.DECIMAL(9, 6),
+    allowNull: true,
+  },
+  longitude: {
+    type: DataTypes.DECIMAL(9, 6),
+    allowNull: true,
+  },
+}, {
+  sequelize,
+  modelName: 'Restaurant',
+  tableName: 'restaurants',
+  timestamps: true
+});
 
 module.exports = Restaurant;

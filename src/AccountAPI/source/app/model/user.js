@@ -10,6 +10,11 @@ const User = sequelize.define(
             primaryKey: true,
             autoIncrement: true,
         }, 
+        name : {
+            type: DataTypes.STRING,
+            allowNull: false,
+            unique: true,
+        },
         email: {
             type: DataTypes.STRING,
             allowNull: false,
@@ -24,7 +29,7 @@ const User = sequelize.define(
         timestamps: true,
     }
 );
-
+    
 //hook để hash password
 User.beforeCreate(async(user, option)=>{
     if(!user.password){
