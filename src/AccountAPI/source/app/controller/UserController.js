@@ -31,7 +31,7 @@ class UserController{
             });
         };
 
-        const newUser = await User.create({
+        await User.create({
             name : name,
             email: email,
             password: password
@@ -59,7 +59,7 @@ class UserController{
         if(existEmail === null){
             return res.status(409).json({
                 success: false,
-                message: "Email does not exist."
+                message: "Name does not exist."
             });
         } else {
             try {
@@ -107,7 +107,9 @@ class UserController{
                 const psw = await bcrypt.hash(newPassword, salt);
                 await User.update(
                     { password: psw },
-                    { where: { email: email } }
+                    { where: { email: email },
+                    individualHooks: true },
+                    
                 );
                 const htmlPath = path.resolve(__dirname, '../../template/resetPassword.html');
                 const html = await fs.readFile(htmlPath, 'utf8');
@@ -142,30 +144,44 @@ class UserController{
             }
         }
     
-    async changePassword(req, res){
-        const newPassword = req.body;
-        const currentPassword = req.body;
-        const email = req.user; //lấy email từ jwt gửi từ người dùng
+    async updateUser(req, res){
+        const { newPassword, newName, currentPassword } = req.body;
+        const user = req.user; 
+        //console.log(email)
+        if(!newPassword || !currentPassword){
+            return res.status(400).json({
+                success: false,
+                message: 'Please enter all fields.'
+            })
+        }
         try {
-            const userChangePassword = await User.findOne({where: {
-                email: email,
+            const userUpdate = await User.findOne({where: {
+                email: user.email,
             }});
-            const isPassword = bcrypt.compareSync(currentPassword, userChangePassword.password);
-            if(!isPassword){
+            console.log(userUpdate.password)
+            const isPassword = bcrypt.compareSync(currentPassword, userUpdate.password);
+            const findName = await User.findOne({where: {
+                name: newName
+            }});
+            const isName = findName !== null;
+            if(!isPassword || isName){
                 return res.status(401).json({
                     success: false,
-                    message: 'Current password wrong.',
+                    message: 'Current password wrong or Name exist',
                 });
             }
             await User.update({
-                password: newPassword
+                password: newPassword,
+                name: newName
             },
             {
                 where: {
-                    email: email
-                }
+                    email: user.email
+                },
+                individualHooks: true
             }
             );
+            
             return res.status(200).json({
                 success: true,
                 message: 'Password changed successfully.'

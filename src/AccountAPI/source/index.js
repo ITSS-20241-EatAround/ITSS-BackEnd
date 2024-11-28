@@ -9,7 +9,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 try {
-    await sequelize.sync({force: false});
+    await sequelize.sync({ force: false });
     console.log("OK!");
 } catch (error) {
     console.log(error.message);
