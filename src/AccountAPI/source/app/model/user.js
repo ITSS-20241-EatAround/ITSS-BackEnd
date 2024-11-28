@@ -24,6 +24,11 @@ const User = sequelize.define(
             type: DataTypes.STRING,
             allowNull: false,
         },
+        user_image:{
+            type: DataTypes.STRING,
+            allowNull: false,
+            defaultValue: "https://i0.wp.com/static.vecteezy.com/system/resources/previews/009/734/564/original/default-avatar-profile-icon-of-social-media-user-vector.jpg?ssl=1"
+        }
     },
     {
         timestamps: true,
@@ -38,5 +43,12 @@ User.beforeCreate(async(user, option)=>{
     const salt = await bcrypt.genSalt(10);
     user.password = await bcrypt.hash(user.password, salt);
 });
+User.beforeUpdate(async (user, options) => {
+    if (user.changed('password')) {
+        const salt = await bcrypt.genSalt(10);
+        user.password = await bcrypt.hash(user.password, salt);
+    }
+});
+
 
 export default User;
