@@ -4,10 +4,8 @@ const { getMethod } = require('../utils/ApiUtil');
 
 exports.updateHistory = async (req, res) => {
     try {
-        const { keyword } = req.query;
         const user_id = token(req).id;
-        const data = await getMethod(req, `/dish/search?keyword=${keyword}&limit=1000`);
-        
+        const {data} = req.body;
         for (var item of data) {
             const exst = await UserSearchHistory.findOne({ where: { dish_id: item.dish_id } });
             if (exst) {
