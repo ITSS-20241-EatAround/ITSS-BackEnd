@@ -26,8 +26,6 @@ app.use(
   expressjwt({
     secret,
     algorithms: ['HS256']
-  }).unless({
-    path: ['/data/restaurant', '/data/dish']
   })
 );
 
@@ -43,10 +41,7 @@ app.use((err, req, res, next) => {
 });
 
 
-app.use(process.env.DEFAULT_VERSION || '/api/v1/suggest', routes);
-
-app.post('/data/restaurant', require('./controllers/SuggestController').createExampleRestaurant);
-app.post('/data/dish', require('./controllers/SuggestController').createExampleDish);
+app.use(process.env.DEFAULT_VERSION || '/api/v1', routes);
 
 // Khởi động server
 const PORT = process.env.PORT || 7202;
