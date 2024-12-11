@@ -77,7 +77,10 @@ exports.search = async (req, res) => {
         distance,
         rating,
         minPrice,
-        maxPrice
+        maxPrice,
+        keyword,
+        page,
+        limit
       },
       data: paginatedItems,
     });
